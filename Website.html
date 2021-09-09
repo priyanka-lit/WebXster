@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .carousel-item{
+        height: 350px;
+        color: black;
+      }
+    </style>
+
+    <title>WebXster</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">WebXster</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle "
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Items
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Earrings</a></li>
+                <li><a class="dropdown-item" href="#">Necklaces</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Materials</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+          <div class="mx-2">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</button>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Sign-upModal">Sign-up</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LoginModal">
+  Launch demo modal
+</button> -->
+
+<!-- Login Modal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">Login to WebXster</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Sign-upModal">
+  Launch demo modal
+</button> -->
+
+<!-- Sign up Modal -->
+<div class="modal fade" id="Sign-upModal" tabindex="-1" aria-labelledby="Sign-upModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="Sign-upModalLabel">Get an WebXster Account.</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-content rounded-5 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <!-- <h5 class="modal-title">Modal title</h5> -->
+            <h2 class="fw-bold mb-0">Sign up for free</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+    
+          <div class="modal-body p-5 pt-0">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+              <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
+              <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+              <hr class="my-4">
+              <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+              <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
+                Sign up with Twitter
+              </button>
+              <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
+                Sign up with Facebook
+              </button>
+              <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"></use></svg>
+                Sign up with GitHub
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner container-fluid carousel-fade">
+        <div class="carousel-item active">
+          <img src="web img2.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Welcome to WebXster</h5>
+            <p>Some of our creative, designer and unique accessories.</p>
+            <button class="btn btn-danger btn-sm">Earrings</button>
+            <button class="btn btn-warning btn-sm">Rings</button>
+            <button class="btn btn-success btn-sm">Necklaces</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://cdn.shopify.com/s/files/1/0238/8262/9197/articles/8a5db7292559d52dea929986c955e7f8_grande.png?v=1565431894" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <p>Variety of jewelleries as per your taste.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1518991669955-9c7e78ec80ca?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8ZWFycmluZ3N8fHx8fHwxNjMxMDI1MDIz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <p>So grab the opportunite.</p>
+            <h5>What your waiting for?</h5>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="container marketing my-4 mx-7">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img
+            class="bd-placeholder-img rounded-circle"
+            width="140"
+            height="140"
+            src="data:image/jpeg;base64,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"
+            alt=""
+          />
+          <!-- <svg
+            class="bd-placeholder-img rounded-circle"
+            width="140"
+            height="140"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Placeholder: 140x140"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#777"></rect>
+            <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+          </svg> -->
+
+          <h2>Earrings</h2>
+          <p>Our Brand New Trendings Earrings.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img
+            class="bd-placeholder-img rounded-circle"
+            width="140"
+            height="140"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv5MBEjH0bBz8U80Y0q3d4tWjbN7NlE40Gsg&usqp=CAU"
+            alt=""
+          />
+
+          <h2>Rings</h2>
+          <p>The Best Suited for Your Loved Onces Rings.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img
+            class="bd-placeholder-img rounded-circle"
+            width="140"
+            height="140"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-4_-2-xJoPt4YzMFSEOVsli6dqSdr61T9SQ&usqp=CAU"
+            alt=""
+          />
+
+          <h2>Necklaces</h2>
+          <p>Packed with Care and Love Jewel Necklaces</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <div class="container my-4">
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Free</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">
+                $0<small class="text-muted fw-light">/mo</small>
+              </h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Find things you love.</li>
+                <li>Support independent sellers.</li>
+                <li>Only on WebXster</li>
+                <li>What are you waiting for? Sign up now.</li>
+              </ul>
+              <button
+                type="button"
+                class="w-100 btn btn-lg btn-outline-primary"
+              >
+                Sign up for free
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Pro</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">
+                $15<small class="text-muted fw-light">/mo</small>
+              </h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>More discount Offers.</li>
+                <li>Free shipping.</li>
+                <li>Fast Delivery.</li>
+                <li>What are you waiting for? Sign up now.</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-primary">
+                Get started
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-white bg-primary border-primary">
+              <h4 class="my-0 fw-normal">Enterprise</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">
+                $29<small class="text-muted fw-light">/mo</small>
+              </h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Free coupons.</li>
+                <li>Fastest Delivery.</li>
+                <li>Sell your own Homemade items.</li>
+                <li>What are you waiting for? Sign up now.</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-primary">
+                Contact us
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container marketing">
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider" />
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">
+            Discount Offers
+            <span class="text-muted">It’ll blow your mind.</span>
+          </h2>
+          <p class="lead">
+            Hurry up!!! and Grab the offer before it get too late.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img
+            class="bd-placeholder-img"
+            width="450"
+            height="350"
+            src="https://images.unsplash.com/photo-1607082350899-7e105aa886ae?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8ZGlzY291bnR8fHx8fHwxNjMwODI5MTAx&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600"
+            alt=""
+          />
+          <!-- <svg
+            class="
+              bd-placeholder-img bd-placeholder-img-lg
+              featurette-image
+              img-fluid
+              mx-auto
+            "
+            width="500"
+            height="500"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#eee"></rect>
+            <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+          </svg> -->
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">
+            Giveaways, it’s that good.
+            <span class="text-muted">See for yourself.</span>
+          </h2>
+          <p class="lead">
+            Get your own pair of Earrings, Rings and many exclusive jewelery with 25% discount at our Mystery Flash Sales. Also a chance to win new exciting free gifts with it.
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img
+            class="bd-placeholder-img"
+            width="450"
+            height="350"
+            src="https://assets.keap.com/image/upload/v1547580437/Blog%20thumbnail%20images/Screen_Shot_2019-01-15_at_12.26.37_PM.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">
+            Flash Sales. <span class="text-muted">Today only.</span>
+          </h2>
+          <p class="lead">
+            <ul style="list-style-type:square;">
+          <li>One Day Only.</li>
+          <li>Thurs.,October 15</li>
+          <li>10:00am - 5:00pm</li>
+          </ul>
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img
+            class="bd-placeholder-img"
+            width="450"
+            height="350"
+            src="https://assets.keap.com/image/upload/v1547580346/Blog%20thumbnail%20images/Screen_Shot_2019-01-15_at_12.25.23_PM.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+
+      <!-- /END THE FEATURETTES -->
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark">
+      <div
+        style="
+          background-color: #0d0347;
+          color: aliceblue;
+          text-transform: uppercase;
+        "
+      >
+        <div class="container">
+          <!-- Grid row-->
+          <div class="row py-4 d-flex align-items-center">
+            <!-- Grid column -->
+            <div
+              class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0"
+            >
+              <h6 class="mb-0">Get connected with us on social networks!</h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-6 col-lg-7 text-center text-md-right">
+              <!-- Facebook -->
+              <a class="fb-ic">
+                <i class="fab fa-facebook-f white-text mr-4"> </i>
+              </a>
+              <!-- Twitter -->
+              <a class="tw-ic">
+                <i class="fab fa-twitter white-text mr-4"> </i>
+              </a>
+              <!-- Google +-->
+              <a class="gplus-ic">
+                <i class="fab fa-google-plus-g white-text mr-4"> </i>
+              </a>
+              <!--Linkedin -->
+              <a class="li-ic">
+                <i class="fab fa-linkedin-in white-text mr-4"> </i>
+              </a>
+              <!--Instagram-->
+              <a class="ins-ic">
+                <i class="fab fa-instagram white-text"> </i>
+              </a>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </div>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase font-weight-bold">WebXster</h6>
+            <hr
+              class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px"
+            />
+            <p>
+              Here you can Buy and Sell exclusively made Earrings, Rings and other beautiful jewelery which will delivered to you at your doorstep.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase font-weight-bold">Products</h6>
+            <hr
+              class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px"
+            />
+            <p>
+              <a href="#!">MDBootstrap</a>
+            </p>
+            <p>
+              <a href="#!">MDWordPress</a>
+            </p>
+            <p>
+              <a href="#!">BrandFlow</a>
+            </p>
+            <p>
+              <a href="#!">Bootstrap Angular</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+            <hr
+              class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px"
+            />
+            <p>
+              <a href="#!">Your Account</a>
+            </p>
+            <p>
+              <a href="#!">Become an Affiliate</a>
+            </p>
+            <p>
+              <a href="#!">Shipping Rates</a>
+            </p>
+            <p>
+              <a href="#!">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase font-weight-bold">Contact</h6>
+            <hr
+              class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px"
+            />
+            <p><i class="fas fa-home mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+              </svg>
+            </i> Mumbai, NY 10012, India</p>
+            <p><i class="fas fa-envelope mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+              </svg>
+            </i> info@example.com</p>
+            <p><i class="fas fa-phone mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg>
+            </i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer-fill" viewBox="0 0 16 16">
+                <path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z"/>
+                <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+              </svg>
+            </i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2021 Copyright:
+        <a href="https://WebXster.com/"> WebXster.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </body>
+</html>
