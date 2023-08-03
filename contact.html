@@ -15,17 +15,26 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
+    <script src="Website.js"></script>
     <title>Contact</title>
 </head>
 <body>
-    <div class="container mb-3 mx-3">
+  <h2><center>Contact us</center></h2>
+  <hr>
+  <form id="form" name="Mycontact">
+    <div class="container mb-4 mx-4">
         <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" onkeyup="Validation()">
+        <div id="text"></div>
       </div>
       <div class="container mb-3 mx-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+        <label for="exampleFormControlTextarea1" class="form-label">Enter your Query</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
+      <hr>
+      <center><a href="#" class="btn btn-lg btn-primary fw-bold border-dark">Submit</a></center>
+  </form>
+
 </body>
 </html>
 
